@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Convite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f0f8ff;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .button {
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .yes {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .no {
+            background-color: #e74c3c;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CONVITE PARA VISITAR A CASA NOVO</h1>
+
+    <a href="https://youtu.be/z7-ZYXpJ_EU?si=90mcur_3HJyo9EiI">
+        <button class="button yes">SIM</button>
+    </a>
+
+    <button class="button no" id="noButton" onmouseover="moveButton()">NÃO</button>
+
+    <script>
+        function moveButton() {
+            const button = document.getElementById('noButton');
+            const maxWidth = window.innerWidth - button.offsetWidth;
+            const maxHeight = window.innerHeight - button.offsetHeight;
+            const randomX = Math.floor(Math.random() * maxWidth);
+            const randomY = Math.floor(Math.random() * maxHeight);
+
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+    </script>
+
+</body>
+</html>
